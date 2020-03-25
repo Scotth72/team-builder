@@ -1,10 +1,15 @@
-import React from  "react";
+import React from "react";
+import SingleFriend from './SingleFriend';
 
 const Friends = props => {
+    console.log(props);
     return(
         <div className="friend-list">
-            {props.friends.map(friend =>
-                <div)}
+            {props.friend.map(friend => {
+                return <SingleFriend friend={friend} DeleteFriend={props.DeleteFriend}/>
+            }
+               
+            )}
 
         </div>
     )
